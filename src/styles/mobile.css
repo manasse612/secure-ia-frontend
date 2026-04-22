@@ -1,0 +1,102 @@
+/* === CSS ADAPTATIF MOBILE + WEB === */
+
+/* Détection plateforme via classe body */
+body.is-mobile {
+  /* Optimisations tactiles */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Zones tactiles agrandies sur mobile */
+body.is-mobile button,
+body.is-mobile a,
+body.is-mobile input,
+body.is-mobile select,
+body.is-mobile textarea {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+/* Boutons plus grands sur mobile */
+body.is-mobile button,
+body.is-mobile .btn {
+  padding: 14px 24px;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+/* Inputs optimisés pour mobile */
+body.is-mobile input,
+body.is-mobile .input {
+  font-size: 16px !important; /* Évite zoom auto sur iOS */
+  padding: 14px 16px;
+  border-radius: 12px;
+}
+
+/* Scroll fluide */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Masquer scrollbar mais garder fonctionnalité */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.5);
+  border-radius: 3px;
+}
+
+/* Safe area pour notch/iPhone */
+@supports (padding-top: env(safe-area-inset-top)) {
+  body.is-mobile .app-header {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  body.is-mobile .app-bottom-nav {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Grille responsive */
+@media (max-width: 768px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .desktop-only {
+    display: none !important;
+  }
+  
+  .mobile-full-width {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+}
+
+/* Éléments spécifiques desktop */
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+/* Amélioration focus mobile */
+body.is-mobile *:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+/* Loader centré */
+body.is-mobile .loading-overlay {
+  backdrop-filter: blur(4px);
+}

@@ -1,0 +1,20 @@
+/** @type {import('@capacitor/cli').CapacitorConfig} */
+const config = {
+  appId: 'com.secureia.app',
+  appName: 'Secure IA',
+  webDir: 'dist',
+  server: {
+    androidScheme: 'https',
+    cleartext: true
+  },
+  plugins: {
+    SplashScreen: {
+      launchShowDuration: 2000,
+      backgroundColor: '#0f172a',
+      showSpinner: true,
+      spinnerColor: '#3b82f6'
+    }
+  }
+};
+
+module.exports = config;

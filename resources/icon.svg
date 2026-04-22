@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Fond bleu foncé -->
+  <rect width="512" height="512" rx="80" fill="#1e3a8a"/>
+  
+  <!-- Cercle extérieur -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#3b82f6" stroke-width="20"/>
+  
+  <!-- Bouclier -->
+  <path d="M256 120 L360 170 V250 C360 330 310 380 256 420 C202 380 152 330 152 250 V170 L256 120Z" 
+        fill="#60a5fa" stroke="#ffffff" stroke-width="12"/>
+  
+  <!-- Checkmark -->
+  <path d="M220 260 L245 290 L305 220" 
+        fill="none" stroke="#1e3a8a" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Étoiles/IA -->
+  <circle cx="180" cy="180" r="15" fill="#ffffff"/>
+  <circle cx="332" cy="180" r="15" fill="#ffffff"/>
+  <circle cx="256" cy="140" r="12" fill="#ffffff"/>
+</svg>
