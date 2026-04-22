@@ -10,13 +10,13 @@ const isMobileApp = window.location.protocol === 'capacitor:' ||
                     import.meta.env.VITE_IS_MOBILE === 'true'
 
 // URL API : 
-// - Production (Vercel) : utiliser VITE_API_URL (backend Render)
+// - Production (Vercel) : utiliser VITE_API_URL + /api (backend Render)
 // - Local web : utiliser le proxy Vite (/api -> localhost:8004)
 // - Mobile : utiliser IP locale ou VITE_API_URL
 const API_BASE_URL = import.meta.env.VITE_API_URL 
-  ? import.meta.env.VITE_API_URL  // Production: URL complète du backend
+  ? `${import.meta.env.VITE_API_URL}/api`  // Production: URL complète du backend + /api
   : (isMobileApp 
-      ? 'http://10.13.53.201:8004'  // Mobile fallback
+      ? 'http://10.13.53.201:8004/api'  // Mobile fallback
       : '/api')  // Local dev avec proxy
 
 // Créer une instance Axios avec la configuration de base
